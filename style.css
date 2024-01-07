@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+
+::before,
+::after,
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 10px;
+  scroll-behavior: smooth;
+  background-color: var(--Light-grayish-blue-2);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 5rem 0;
+}
+
+:root {
+  /* Primary Color */
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+  /* Nuetral Color */
+  --White: hsl(0, 0%, 100%);
+  --Very-light-grayish-blue: hsl(210, 60%, 98%);
+  --Light-grayish-blue-1: hsl(211, 68%, 94%);
+  --Light-grayish-blue-2: hsl(205, 33%, 90%);
+  --Grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+  /* Fonts */
+  --font-size: 1.6rem;
+  --font-weight-medium: 500;
+  --font-weight-extrabold: 800;
+  --line-height: 1.5;
+  /* Animation */
+  --transition: 0.3s;
+}
+
+.image {
+  max-width: 100%;
+}
+
+img {
+  display: block;
+}
+
+p {
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight-medium);
+  color: var(--Dark-grayish-blue);
+}
+
+.time {
+  color: var(--Grayish-blue);
+}
+
+.container {
+  background-color: var(--White);
+  padding: 3rem;
+  max-width: 80rem;
+  border-radius: 1.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 4rem;
+  color: var(--Very-dark-blue);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header h1 span {
+  background-color: var(--Blue);
+  display: inline;
+  padding: 0.5rem 1.2rem;
+  color: var(--White);
+  border-radius: 0.5rem;
+  font-size: var(--font-size);
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  color: var(--Dark-grayish-blue);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  color: var(--Blue);
+}
+
+.section article {
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.section article:nth-child(1),
+.section article:nth-child(2),
+.section article:nth-child(3) {
+  background-color: var(--Very-light-grayish-blue);
+}
+
+.section article:nth-child(4) {
+  padding-bottom: 10rem;
+}
+
+.message {
+  position: absolute;
+  margin-top: 22px;
+  width: 557px;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Light-grayish-blue-1);
+  cursor: pointer;
+}
+
+.section article:nth-child(5) .image-2 {
+  margin-left: 10rem;
+}
+
+.message:hover {
+  background-color: var(--Light-grayish-blue-1);
+}
+
+.info h2 p,
+.info h2 span {
+  display: inline;
+}
+
+.info h2 .icon {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--Red);
+  border-radius: 50%;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: var(--font-weight-extrabold);
+  color: var(--Very-dark-blue);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.title:hover {
+  color: var(--Blue);
+}
+
+.club {
+  font-size: var(--font-size);
+  font-weight: var(--font-weight-extrabold);
+  transition: var(--transition);
+  color: var(--Very-dark-blue);
+  cursor: pointer;
+}
+
+.club:hover {
+  color: var(--Blue);
+}
+
+.none {
+  display: none !important;
+}
+
+.bg-white {
+  background-color: var(--White) !important;
+}
+
+@media screen and (max-width: 53em) {
+  img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .container {
+    width: 53rem;
+    padding: 2rem;
+  }
+
+  .section article:nth-child(4) {
+    padding-bottom: 15rem;
+  }
+
+  .message {
+    width: 364px;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 34.5em) {
+  html,
+  body {
+    padding: 0;
+  }
+
+  .container {
+    width: 100vw;
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 2.3rem;
+  }
+
+  .section article:nth-child(5) .image-2 {
+    margin-left: 0;
+  }
+
+  .section article {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .message {
+    width: 28rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  .club {
+    font-size: 1.3rem;
+  }
+}
